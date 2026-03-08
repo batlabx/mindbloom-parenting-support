@@ -1,0 +1,7 @@
+{
+  "name": "MindBloom - Parenting Support",
+  "description": "A calming, expert-led platform for navigating social-emotional challenges with your children.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
