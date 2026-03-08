@@ -182,7 +182,7 @@ const AdviceActivities: React.FC<Props> = ({ profile, onUpdateProfile, onBack })
 
           <header className="text-center space-y-4 pt-4 w-full">
             <h2 className="text-4xl md:text-6xl font-bold text-[#2E2E2E] font-display">Pick a Challenge</h2>
-            <p className="text-[#3B3B3B]/50 font-medium text-lg md:text-xl leading-relaxed whitespace-nowrap">Choose an area where {selectedChild.name} could use some gentle support.</p>
+            <p className="text-[#3B3B3B]/50 font-medium text-lg md:text-xl leading-relaxed whitespace-normal break-words">Choose an area where {selectedChild.name} could use some gentle support.</p>
           </header>
         </div>
 

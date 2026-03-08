@@ -147,12 +147,12 @@ const CoachAIView: React.FC<Props> = ({ profile, onUpdateProfile, onBack }) => {
       <div className="flex-1 bg-white rounded-[3rem] card-shadow border border-[#EEF5F4] overflow-hidden flex flex-col">
         {pastUserQuestions.length > 0 && (
           <div className="bg-[#FAF9F6] px-6 py-3 border-b border-[#EEF5F4] flex items-center gap-4 overflow-x-auto no-scrollbar">
-            <span className="text-[8px] font-black text-[#3B3B3B]/30 uppercase tracking-[0.3em] whitespace-nowrap">Past Topics:</span>
+            <span className="text-[8px] font-black text-[#3B3B3B]/30 uppercase tracking-[0.3em] whitespace-normal break-words">Past Topics:</span>
             {pastUserQuestions.map((q, i) => (
               <button 
                 key={i} 
                 onClick={() => handleSend(q.content)}
-                className="text-[10px] font-bold bg-white border border-[#EEF5F4] px-4 py-1.5 rounded-full text-[#4E8B83] hover:bg-[#4E8B83] hover:text-white transition-all whitespace-nowrap shadow-sm"
+                className="text-[10px] font-bold bg-white border border-[#EEF5F4] px-4 py-1.5 rounded-full text-[#4E8B83] hover:bg-[#4E8B83] hover:text-white transition-all whitespace-normal break-words shadow-sm"
               >
                 {q.content.length > 20 ? q.content.substring(0, 20) + '...' : q.content}
               </button>
