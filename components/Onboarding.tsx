@@ -159,7 +159,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
             <GrowingPlant className="-scale-x-100" />
           </div>
           <div className="space-y-0.5">
-            <p className="text-[#2E2E2E] text-2xl font-bold font-display leading-tight whitespace-normal break-words">
+            <p className="text-[#2E2E2E] text-2xl font-bold font-display leading-tight whitespace-nowrap">
               Personalized, practical support for hard parenting moments
             </p>
             <p className="text-[#3B3B3B]/60 text-sm font-medium">For everyday, non-medical emotional and behavioral challenges</p>

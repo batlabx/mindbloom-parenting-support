@@ -62,7 +62,7 @@ const Dashboard: React.FC<DashboardProps> = ({ profile, setView }) => {
           <GrowingPlant className="-scale-x-100" />
         </div>
         <div className="space-y-2">
-          <p className="text-sm md:text-xl lg:text-2xl text-[#3B3B3B]/80 font-medium px-4 whitespace-normal break-words font-display">
+          <p className="text-sm md:text-xl lg:text-2xl text-[#3B3B3B]/80 font-medium px-4 font-display leading-snug">
             Practical, personalized guidance for your child’s everyday social-emotional moments
           </p>
           <p className="text-[9px] md:text-xs text-[#3B3B3B]/40 font-medium px-4 max-w-2xl mx-auto italic">
