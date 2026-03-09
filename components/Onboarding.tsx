@@ -5,6 +5,9 @@ import { trackEvent } from '../services/analytics';
 
 interface OnboardingProps {
   onComplete: (profile: UserProfile) => void;
+  initialName?: string;
+  email?: string;
+  username?: string;
 }
 
 const GrowingPlant = ({ className = "" }: { className?: string }) => (
@@ -29,10 +32,10 @@ const INTERESTS_MAP = {
   '16-18': ['Reading', 'Science', 'Friends', 'Creative Arts', 'Technology', 'Coding', 'Gaming', 'Travel', 'Career', 'Fitness']
 };
 
-const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
-  const [parentName, setParentName] = useState('');
+const Onboarding: React.FC<OnboardingProps> = ({ onComplete, initialName = '', email, username }) => {
+  const [parentName, setParentName] = useState(initialName);
   const [children, setChildren] = useState<Child[]>([]);
-  const [step, setStep] = useState<'parent' | 'child'>('parent');
+  const [step, setStep] = useState<'parent' | 'child'>(initialName ? 'child' : 'parent');
   const [tempChild, setTempChild] = useState<Partial<Child>>({ 
     name: '', 
     age: undefined, 
@@ -138,7 +141,9 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
     }
     
     onComplete({ 
-      name: parentName, 
+      name: parentName,
+      email,
+      username,
       children: finalChildren, 
       onboarded: true,
       favorites: [],

@@ -43,7 +43,7 @@ export const syncProfileToCloud = async (profile: UserProfile): Promise<boolean>
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        userId: 'dev-user-123', // Hardcoded for this demo
+        userId: profile.email || profile.username || 'dev-user-123',
         profile: profile,
         syncTimestamp: new Date().toISOString()
       }),

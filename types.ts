@@ -35,6 +35,8 @@ export type SyncStatus = 'synced' | 'syncing' | 'error' | 'offline';
 
 export interface UserProfile {
   name: string;
+  email?: string;
+  username?: string;
   children: Child[];
   onboarded: boolean;
   favorites: FavoriteItem[];
